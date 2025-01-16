@@ -1,9 +1,13 @@
 from flask import Flask, render_template, request, redirect, session, url_for, jsonify
 from pymongo import MongoClient
+from flask_cors import CORS  # Import CORS
 import os
 
 app = Flask(__name__)
 app.secret_key = "your_secret_key"
+
+# Enable CORS for all routes
+CORS(app)
 
 # MongoDB setup
 MONGO_URI = "mongodb+srv://kothiyalofficial:cQeqY8hnef8B8AK3@cluster0.tzgns.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
