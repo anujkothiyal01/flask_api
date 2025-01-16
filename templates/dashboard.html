@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h2>Welcome, {{ username }}</h2>
+    <form method="POST" action="https://flask-api-1-hvbw.onrender.com/dashboard">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="text" name="skills" placeholder="Skills (e.g., Python, C++)" required>
+        <input type="text" name="phone" placeholder="Phone Number" required>
+        <input type="url" name="linkedin" placeholder="LinkedIn Profile URL" required>
+        <button type="submit">Create/Update Card</button>
+    </form>
+    <a href="/logout"><button>Logout</button></a>
+</body>
+</html>
